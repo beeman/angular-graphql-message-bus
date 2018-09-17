@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  graphqlUrl: 'https://graphql-message-bus.now.sh/',
+  graphqlWsUrl: 'wss://graphql-message-bus.now.sh/',
+  // graphqlUrl: 'http://localhost:4000/',
+  // graphqlWsUrl: 'ws://localhost:4000/',
 };
 
 /*

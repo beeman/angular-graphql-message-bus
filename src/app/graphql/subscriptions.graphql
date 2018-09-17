@@ -1,0 +1,9 @@
+# import SubscribeInput from "../generated/schema.graphql"
+
+subscription subscribe($filter: SubscribeInput) {
+  subscribe(filter: $filter) {
+    type
+    scope
+    payload
+  }
+}

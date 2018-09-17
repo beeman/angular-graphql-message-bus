@@ -1,0 +1,31 @@
+scalar JSON
+
+type MessagePayload {
+  type: String!
+  scope: String
+  payload: JSON
+}
+
+type Mutation {
+  publish(message: PublishInput): MessagePayload
+}
+
+input PublishInput {
+  type: String!
+  scope: String
+  payload: JSON
+}
+
+type Query {
+  help: String
+}
+
+input SubscribeInput {
+  type: String
+  scope: String
+}
+
+type Subscription {
+  subscribe(filter: SubscribeInput): MessagePayload
+}
+

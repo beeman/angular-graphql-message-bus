@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+// Bootswatch themes
+// cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty
+// pulse, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united
+@import "~bootswatch/dist/darkly/bootstrap.min.css";
+
+// Font Awesome Is not imported in index.html so it works in StackBlitz
+@import "~font-awesome/css/font-awesome.min.css";

@@ -1,0 +1,9 @@
+# import PublishInput from "../generated/schema.graphql"
+
+mutation publish($message: PublishInput) {
+  publish (message: $message) {
+    type
+    scope
+    payload
+  }
+}
