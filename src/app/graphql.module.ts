@@ -7,6 +7,7 @@ import { getMainDefinition } from 'apollo-utilities';
 
 import { environment } from '../environments/environment';
 import { split } from 'apollo-link';
+import { OperationDefinitionNode } from 'graphql';
 
 export function createApollo(httpLink: HttpLink) {
   // Create an http link:
@@ -25,7 +26,9 @@ export function createApollo(httpLink: HttpLink) {
   const link = split(
     // split based on operation type
     ({query}) => {
-      const {kind, operation} = getMainDefinition(query);
+      const {kind, operation}: any = getMainDefinition(query);
+      // const definiton: ;
+      // definiton.kind
       return ( kind === 'OperationDefinition' ) && operation === 'subscription' || operation === 'mutation';
     },
     ws,
